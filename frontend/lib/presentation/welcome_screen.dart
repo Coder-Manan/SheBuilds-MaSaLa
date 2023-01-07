@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/app_theme.dart';
+import 'package:frontend/presentation/components/appbar.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -8,16 +9,7 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Container(
-            margin: const EdgeInsets.fromLTRB(16, 16, 0, 16),
-            child: Image.asset('assets/images/logo-appbar.png')),
-        backgroundColor: Colors.transparent,
-        title: Text(
-          'MedCord',
-          style: Theme.of(context).textTheme.bodyText2,
-        ),
-      ),
+      appBar: ourAppBar('MedCord', context),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
