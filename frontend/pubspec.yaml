@@ -41,6 +41,8 @@ dependencies:
   hive_flutter: ^1.1.0
   flutter_bloc: ^8.1.1
   get: ^4.6.5
+  bloc: ^8.1.0
+  equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:
@@ -95,6 +97,8 @@ flutter:
     - family: Inter
       fonts:
         - asset: assets/fonts/Inter-Bold.ttf
-
+    - family: Montserrat Italic
+      fonts:
+        - asset: assets/fonts/Montserrat-Italic.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
