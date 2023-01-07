@@ -1,5 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:frontend/presentation/welcome_screen.dart';
+import 'package:get/get.dart';
 
 class InfoScreenState extends Equatable {
   const InfoScreenState();
@@ -35,8 +37,9 @@ class InfoScreenBloc extends Bloc<InfoScreenEvent, InfoScreenState> {
   InfoScreenBloc() : super(const InfoScreenState()) {
     on<RegistrationEvent>(
         (RegistrationEvent event, Emitter<InfoScreenState> emit) async {
-      //ping the server
+      //TODO: ping the server
       //navigate to the next screen
+      Get.offAndToNamed(WelcomeScreen.id);
     });
   }
 }
