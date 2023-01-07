@@ -39,6 +39,8 @@ dependencies:
   http: ^0.13.5
   hive: ^2.2.3
   hive_flutter: ^1.1.0
+  flutter_bloc: ^8.1.1
+  get: ^4.6.5
 
 dev_dependencies:
   flutter_test:
@@ -81,7 +83,7 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: News Cycle
+    - family: News Cycle Bold
       fonts:
         - asset: assets/fonts/NewsCycle-Bold.ttf
     - family: Montserrat Regular
@@ -92,7 +94,7 @@ flutter:
         - asset: assets/fonts/Montserrat-Medium.ttf
     - family: Inter
       fonts:
-        - asset: assets/fonts/Inter Bold.ttf
+        - asset: assets/fonts/Inter-Bold.ttf
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
