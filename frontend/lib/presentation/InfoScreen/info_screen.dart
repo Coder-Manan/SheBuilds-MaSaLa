@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:frontend/app_theme.dart';
-import 'package:frontend/presentation/InfoScreen/bloc/info_screen_bloc.dart';
+import 'package:frontend/presentation/InfoScreen/info_screen_bloc.dart';
 import 'package:frontend/presentation/components/appbar.dart';
 
 final GlobalKey<FormState> _formKey = GlobalKey<FormState>();

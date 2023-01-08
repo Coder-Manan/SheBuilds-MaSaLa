@@ -25,7 +25,7 @@ abstract class InfoScreenEvent extends Equatable {
 }
 
 class RegistrationEvent extends InfoScreenEvent {
-  final Map<String, dynamic?> data;
+  final Map<String, dynamic> data;
 
   const RegistrationEvent({required this.data});
 

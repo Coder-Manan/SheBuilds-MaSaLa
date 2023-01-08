@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:frontend/app_router.dart';
 import 'package:frontend/app_theme.dart';
 import 'package:frontend/domain/repositories/dummy_repository.dart';
+import 'package:frontend/presentation/HomeScreen/home_screen.dart';
 import 'package:frontend/presentation/InfoScreen/info_screen.dart';
 import 'package:frontend/presentation/welcome_screen.dart';
 import 'package:get/get.dart';
@@ -26,7 +27,7 @@ class Application extends StatelessWidget {
         title: 'MedCord',
         theme: AppTheme.theme,
         onGenerateRoute: AppRouter.generateRoute,
-        initialRoute: InfoScreen.id,
+        initialRoute: HomeScreen.id,
       ),
     );
   }

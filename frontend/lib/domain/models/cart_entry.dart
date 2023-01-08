@@ -17,14 +17,11 @@ class CartEntry {
 
   CartEntry({this.item, this.quantity, this.totalPrice});
 
-  // CartEntry.fromJson(Map<String, dynamic> json) {
-  //   numberOfItems = json['numberOfItems'];
-  //   itemCartDesc = {};
-  //   for (var itemAndDesc in json['items']) {
-  //     itemCartDesc!
-  //         .addAll({Item.fromJson(itemAndDesc['item']): itemAndDesc['desc']});
-  //   }
-  // }
+  CartEntry.fromJson(Map<String, dynamic> json) {
+    item = Medicine.fromJson(json['medicine']);
+    quantity = json['quantity'];
+    totalPrice = json['totalPrice'];
+  }
 
   // void addItem(Item item, int quantity) {
   //   // {'quantity': x, 'total price': y} is the desc
