@@ -12,3 +12,4 @@ Today in medicine market world, there are lots of problems that arise due to non
 - Backend - NodeJS
 - Blockchain - Concordium
 - Smart Contract - Rust
+- Auth + DB - Firebase
