@@ -45,6 +45,14 @@ class ProductsRepository {
         'price': 15,
         'imgSrc':
             'https://drive.google.com/uc?export=view&id=1L1UBld6IFUSMOT7PgbhODfYzrpDc_ojP'
+      },
+      {
+        'name': 'med3',
+        'desc': 'dummy desc - 3',
+        'supplier': 'dummy supplier - 3',
+        'price': 12,
+        'imgSrc':
+            'https://drive.google.com/uc?export=view&id=1L1UBld6IFUSMOT7PgbhODfYzrpDc_ojP'
       }
     ];
     return dummyJson.map((e) => Medicine.fromJson(e)).toList();

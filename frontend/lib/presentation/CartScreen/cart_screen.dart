@@ -52,8 +52,17 @@ class CartScreen extends StatelessWidget {
         return Scaffold(
           appBar: ourAppBar('Cart', context),
           body: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Products', style: Theme.of(context).textTheme.headline1),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 22,
+                  ),
+                  Text('Products',
+                      style: Theme.of(context).textTheme.headline1),
+                ],
+              ),
               GridView.count(
                 shrinkWrap: true,
                 crossAxisCount: 2,

@@ -15,6 +15,30 @@ class CartRepository {
       },
       'quantity': 5,
       'totalPrice': 50,
+    },
+    {
+      'medicine': {
+        'name': 'med2',
+        'desc': 'dummy desc',
+        'supplier': 'dummy supplier',
+        'price': 15,
+        'imgSrc':
+            'https://drive.google.com/uc?export=view&id=1L1UBld6IFUSMOT7PgbhODfYzrpDc_ojP'
+      },
+      'quantity': 3,
+      'totalPrice': 45,
+    },
+    {
+      'medicine': {
+        'name': 'med3',
+        'desc': 'dummy desc',
+        'supplier': 'dummy supplier',
+        'price': 12,
+        'imgSrc':
+            'https://drive.google.com/uc?export=view&id=1L1UBld6IFUSMOT7PgbhODfYzrpDc_ojP'
+      },
+      'quantity': 3,
+      'totalPrice': 36,
     }
   ].map((e) => CartEntry.fromJson(e)).toList();
 

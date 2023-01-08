@@ -16,45 +16,51 @@ class _NewCardState extends State<NewCard> {
   Widget build(BuildContext context) {
     final CartEntry cartItem = widget.cartItem;
     int quantity = cartItem.quantity!;
-    return SizedBox(
-      height: 159,
-      width: 176,
-      child: Card(
-        child: Center(
-          child: Column(
-            children: [
-              Image.network(
-                cartItem.item!.imgSrc!,
-                width: 81,
-                height: 81,
+    return Center(
+      child: Align(
+        child: SizedBox(
+          height: 159,
+          width: 176,
+          child: Center(
+            child: Card(
+              child: Center(
+                child: Column(
+                  children: [
+                    Image.network(
+                      cartItem.item!.imgSrc!,
+                      width: 81,
+                      height: 81,
+                    ),
+                    Row(
+                      children: [
+                        IconButton(
+                            onPressed: () {
+                              CartRepository.decreaseQuantity(cartItem.item!);
+                              setState(() {
+                                quantity -= 1;
+                              });
+                            },
+                            icon: const Icon(Icons.remove)),
+                        Column(
+                          children: [
+                            Text(cartItem.item!.name!),
+                            Text('$quantity no.s')
+                          ],
+                        ),
+                        IconButton(
+                            onPressed: () {
+                              CartRepository.increaseQuantity(cartItem.item!);
+                              setState(() {
+                                quantity += 1;
+                              });
+                            },
+                            icon: const Icon(Icons.add))
+                      ],
+                    )
+                  ],
+                ),
               ),
-              Row(
-                children: [
-                  IconButton(
-                      onPressed: () {
-                        CartRepository.decreaseQuantity(cartItem.item!);
-                        setState(() {
-                          quantity -= 1;
-                        });
-                      },
-                      icon: const Icon(Icons.remove)),
-                  Column(
-                    children: [
-                      Text(cartItem.item!.name!),
-                      Text('$quantity no.s')
-                    ],
-                  ),
-                  IconButton(
-                      onPressed: () {
-                        CartRepository.increaseQuantity(cartItem.item!);
-                        setState(() {
-                          quantity += 1;
-                        });
-                      },
-                      icon: const Icon(Icons.add))
-                ],
-              )
-            ],
+            ),
           ),
         ),
       ),
