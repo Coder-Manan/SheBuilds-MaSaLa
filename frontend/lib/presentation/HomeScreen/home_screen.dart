@@ -47,9 +47,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeScreenBloc, HomeScreenState>(
       builder: ((context, state) {
-        return Scaffold(
-          appBar: ourAppBar('Home', context),
-          body: Column(
+        return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SearchBar(),
@@ -72,8 +70,7 @@ class HomeScreen extends StatelessWidget {
                         ): null
                       }))),
                       const SizedBox(height: 23,),
-            ],
-          ),
+          ],
         );
       }),
     );
