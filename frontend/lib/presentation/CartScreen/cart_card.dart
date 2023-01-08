@@ -36,9 +36,13 @@ class _NewCardState extends State<NewCard> {
                         IconButton(
                             onPressed: () {
                               CartRepository.decreaseQuantity(cartItem.item!);
-                              setState(() {
+                              if (quantity == 1) {
+                                dispose();
+                              } else {
+                                setState(() {
                                 quantity -= 1;
-                              });
+                                });
+                              }
                             },
                             icon: const Icon(Icons.remove)),
                         Column(

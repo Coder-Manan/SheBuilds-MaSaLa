@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:frontend/presentation/CartScreen/cart_card.dart';
 import 'package:frontend/presentation/CartScreen/cart_screen_bloc.dart';
 import 'package:frontend/presentation/components/appbar.dart';
+import 'package:frontend/presentation/components/bottom_navbar.dart';
 
 // class CartCard extends StatefulWidget {
 //   const CartCard({super.key});
@@ -71,9 +72,11 @@ class CartScreen extends StatelessWidget {
                           cartItem: e,
                         ))
                     .toList(),
-              )
+              ),
+              // Align(alignment: Alignment.bottomCenter, child: ourNavBar('cart'))
             ],
           ),
+          bottomNavigationBar: BottomAppBar(color: Colors.transparent,child:  ourNavBar('cart')),
         );
       }),
     );

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:frontend/domain/repositories/cart_repository.dart';
 import 'package:frontend/presentation/HomeScreen/home_screen_bloc.dart';
 import 'package:frontend/presentation/components/appbar.dart';
+import 'package:frontend/presentation/components/bottom_navbar.dart';
 import 'package:frontend/presentation/components/horizontal_card_list_with_heading.dart';
 import 'package:frontend/presentation/components/search_bar.dart';
 
@@ -47,7 +48,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeScreenBloc, HomeScreenState>(
       builder: ((context, state) {
-        return Column(
+        return Scaffold(
+          appBar: ourAppBar('Home', context),
+          body: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SearchBar(),
@@ -55,7 +58,9 @@ class HomeScreen extends StatelessWidget {
                   title: 'Products',
                   cardsList: state.products.map((key, value) =>
                       MapEntry(key.name!, {value: CartRepository.addToCart}))),
-                      const SizedBox(height: 23,),
+              const SizedBox(
+                height: 23,
+              ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(18, 0, 0, 0),
                 child: Image.asset('assets/images/offer-image.png'),
@@ -69,8 +74,14 @@ class HomeScreen extends StatelessWidget {
                           height: 81,
                         ): null
                       }))),
-                      const SizedBox(height: 23,),
-          ],
+              const SizedBox(
+                height: 23,
+              ),
+              // Align(alignment: Alignment.bottomCenter, child: ourNavBar('home'))
+            ],
+          ),
+          bottomNavigationBar:
+              BottomAppBar(color: Colors.transparent, child: ourNavBar('home')),
         );
       }),
     );
