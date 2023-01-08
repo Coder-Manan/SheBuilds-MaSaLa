@@ -8,7 +8,7 @@ Today in medicine market world, there are lots of problems that arise due to non
 <br>Currently our smart contract is configured in such a way that all the transactions occur between a single seller account (our wallet) and all the users.
 
 ### Tech Stack
-Frontend - Flutter
-Backend - NodeJS
-Blockchain - Concordium
-Smart Contract - Rust
+- Frontend - Flutter
+- Backend - NodeJS
+- Blockchain - Concordium
+- Smart Contract - Rust
