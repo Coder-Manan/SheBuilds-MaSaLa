@@ -3,7 +3,20 @@ import 'package:frontend/domain/models/medicine.dart';
 import 'package:frontend/domain/repositories/products_repository.dart';
 
 class CartRepository {
-  static List<CartEntry> cart = [];
+  static List<CartEntry> cart = [
+    {
+      'medicine': {
+        'name': 'med1',
+        'desc': 'dummy desc',
+        'supplier': 'dummy supplier',
+        'price': 10,
+        'imgSrc':
+            'https://drive.google.com/uc?export=view&id=1L1UBld6IFUSMOT7PgbhODfYzrpDc_ojP'
+      },
+      'quantity': 5,
+      'totalPrice': 50,
+    }
+  ].map((e) => CartEntry.fromJson(e)).toList();
 
   static Future<List<CartEntry>> getCart() async {
     if (cart == []) {
